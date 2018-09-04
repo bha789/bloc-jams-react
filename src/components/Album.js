@@ -46,6 +46,23 @@ class Album extends Component {
     }
 
 
+
+
+    displayIcon (song, index) {
+      const isSameSong = this.state.currentSong === song;
+  
+      if (this.state.isPlaying && isSameSong) {
+        return <span className="pause"><i class="icon ion-md-pause"></i></span>
+      } else if (this.state.isHovered === index + 1) {
+        return <span className="play"><i class="icon ion-md-play"></i></span>
+      } else if (!this.state.isPlaying && isSameSong) {
+        return <span className="play"><i class="icon ion-md-play"></i></span>
+      } else {
+        return <span className="songNumber"> {index + 1} </span>
+      }
+    }
+
+
     render() {
         return (
           <section className="album">
@@ -66,19 +83,19 @@ class Album extends Component {
             <tbody>
             {
             this.state.album.songs.map((song, index) => 
-             <tr className = 'song' key={index} onClick={() => this.handleSongClick(song)} > 
-                <td>{index + 1}</td>
+             <tr className = 'song' key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={(e) =>this.setState({isHovered: index + 1})} onMouseLeave={(e) => this.setState({isHovered: false})}> 
+                <td>{this.displayIcon(song, index)}</td>
                 <td>{song.title}</td>
                 <td>{song.duration}</td>
              </tr>
-           	)
+             )
            }  
             </tbody>
           </table>
           </section>
         );
-    }
-}
+      }
+  }
 
 
 export default Album;

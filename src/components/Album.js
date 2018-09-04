@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import albumData from './../data/albums';
+import PlayerBar from './PlayerBar';
 
 class Album extends Component {
     constructor(props) {
@@ -32,7 +33,7 @@ class Album extends Component {
 
     setSong(song){
       this.audioElement.src = song.audioSrc; 
-      this.setState = ({currentSong: song})
+      this.setState({currentSong: song})
     }
 
     handleSongClick(song){
@@ -44,9 +45,6 @@ class Album extends Component {
           this.play();
       }
     }
-
-
-
 
     displayIcon (song, index) {
       const isSameSong = this.state.currentSong === song;

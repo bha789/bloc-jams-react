@@ -15,12 +15,11 @@ class Album extends Component {
         currentSong: album.songs[0],
         isPlaying: false,
         currentTime: 0, 
-        currentDuration: album.songs[0].duration
+        currentDuration: album.songs[0].duration,
       };
 
       this.audioElement = document.createElement('audio');
-      this.audioElement.src = album.songs[0].audioSrc;
-
+      this.audioElement.src = album.songs[0].audioSrc; 
     }
 
     play(){
@@ -83,7 +82,7 @@ class Album extends Component {
         },
         durationchange: e => {
           this.setState({ duration: this.audioElement.duration });
-        }
+        },
       };
       this.audioElement.addEventListener('timeupdate', this.eventListeners.timeupdate);
       this.audioElement.addEventListener('durationchange', this.eventListeners.durationchange);
@@ -100,6 +99,19 @@ class Album extends Component {
       this.audioElement.currentTime = newTime; 
       this.setState({currentTime: newTime});
     }
+
+    formatTime(time){
+      const minutes = Math.floor(time / 60);
+      const seconds = Math.round(time % 60); 
+      return minutes + ':' + seconds; 
+    }
+
+    handleVolumeChange(e){
+      const newVolume = e.target.value; 
+      this.audioElement.volume = newVolume; 
+      this.setState({volume: newVolume});
+    }
+
     
     render() {
         return (
@@ -138,11 +150,13 @@ class Album extends Component {
             currentSong={this.state.currentSong}
             currentTime={this.state.currentTime}
             duration={this.state.duration}
+            currentVolume={this.state.currentVolume}
             handleSongClick={() => this.handleSongClick(this.state.currentSong)}
             handlePrevClick={() => this.handlePrevClick()}
             handleNextClick={() => this.handleNextClick()}
             handleTimeChange={(e) => this.handleTimeChange(e)}
-            
+            handleVolumeChange={(e) => this.handleVolumeChange(e)}
+            formatTime={(e) => this.formatTime(e)}
             />
           </section>
         );

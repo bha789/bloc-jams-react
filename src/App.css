@@ -1,20 +1,66 @@
 
 
 body {
-  background-color: black;
-  font-family: 'Quicksand', sans-serif;
+  margin: 0; 
+  padding: 0; 
+  font-family: 'Heebo', sans-serif;
   color: white; 
+  background-color: #F07F7F;
 }
 
 .title {
+  margin: 0 0 0 0; 
   background-color: black;
   color: white; 
   text-align: center; 
-  font-size: 10em; 
+  font-size: 8em; 
+  padding-top: 1em;
+}
+
+.hero-title {
+  background-color: black;
+  text-align: center; 
+  margin: 0 0 0 0; 
+  padding-bottom: 3em; 
+  font-size: 2em; 
+  
 }
 
 .link {
   text-decoration: none; 
   color: white; 
-  float: right;  
+  float: right; 
+}
+
+.selling-points {
+  font-size: 1.5em;
+  text-align: center; 
+  width: 50%; 
+}
+
+.point-one {
+  float: left; 
+}
+
+.point-two {
+  float: right;
+}
+
+.point-three {
+  float: left;
+}
+
+.one-image {
+  float: right; 
+  width: 50%; 
+}
+
+.two-image {
+  float: left; 
+  width: 50%; 
+}
+
+.three-image {
+  float: right; 
+  width: 50%;
 }

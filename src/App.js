@@ -13,7 +13,7 @@ class App extends Component {
       <div className="App"> 
         <nav class-Name = 'app-header'>
             <Link className = 'link' to='/library'> Albums</Link>
-            <Link className = 'link' to='/'>Home|</Link>
+            <Link className = 'link' to='/'>Home</Link>
           </nav>
         <main>
           <Route exact path = '/' component={Landing}/>

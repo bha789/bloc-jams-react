@@ -128,9 +128,9 @@ class Album extends Component {
               <div className="release-info">{this.state.album.releaseInfo}</div>
               </div>
               <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title} />
-            </section>
+            </section>  
           <table id="song-list">
-            <colgroup>
+            <colgroup id= 'songs'>
               <col id="song-number-column" />
               <col id="song-title-column" />
               <col id="song-duration-column" />

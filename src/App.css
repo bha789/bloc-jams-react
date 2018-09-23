@@ -35,48 +35,15 @@ body {
 
 .selling-points {
   font-size: 1.5em;
+  text-align: center;  
+  width: 100%; 
+  padding-top: 5%; 
+  padding-bottom: 5%; 
+}
+
+.image { 
+  width: 100%;
   text-align: center; 
-}
-
-.point-one {
-  float: left; 
-  width: 50%; 
-  padding-top: 10%; 
-  padding-bottom: 10%; 
-}
-
-.point-two {
-  float: right; 
-  width: 50%; 
-  padding-top: 10%; 
-  padding-bottom: 10%;
-}
-
-.point-three {
-  float: left;
-  width: 50%; 
-  padding-top: 10%; 
-  padding-bottom: 10%;
-}
-
-.one-image {
-  float: right; 
-  width: 50%;
-}
-
-.two-image {
-  float: left; 
-  width: 50%; 
-}
-
-.three-image {
-  float: right; 
-  width: 50%;
-}
-
-.bottom-bar-land {
-  background-color: black; 
-  padding-top: 1em; 
-  margin: 0 0 0 0; 
-  padding-bottom: 1em; 
+  padding-top: 3%; 
+  
 }

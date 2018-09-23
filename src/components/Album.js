@@ -100,10 +100,16 @@ class Album extends Component {
       this.setState({currentTime: newTime});
     }
 
+   
     formatTime(time){
       const minutes = Math.floor(time / 60);
       const seconds = Math.round(time % 60); 
-      return minutes + ':' + seconds; 
+      if(seconds < 10){
+        return minutes + ':' + '0' + seconds; 
+      } else {
+        return minutes + ':' + seconds; 
+      }
+      
     }
 
     handleVolumeChange(e){

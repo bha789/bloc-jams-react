@@ -122,12 +122,12 @@ class Album extends Component {
         return (
           <section className="album">
             <section id="album-info">
-              <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title} />
-              <div className="album-details">
+             <div className="album-details">
               <h1 id="album-title">{this.state.album.title}</h1>
               <h2 className="artist">{this.state.album.artist}</h2>
-              <div id="release-info">{this.state.album.releaseInfo}</div>
+              <div className="release-info">{this.state.album.releaseInfo}</div>
               </div>
+              <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title} />
             </section>
           <table id="song-list">
             <colgroup>
@@ -162,7 +162,10 @@ class Album extends Component {
             handleTimeChange={(e) => this.handleTimeChange(e)}
             handleVolumeChange={(e) => this.handleVolumeChange(e)}
             formatTime={(e) => this.formatTime(e)}
-            />
+            /> 
+          <footer id='bottom-bar-album'>
+                    <p>hidden text</p>
+                </footer>  
           </section>
         );
       }

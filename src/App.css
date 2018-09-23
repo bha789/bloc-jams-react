@@ -1,5 +1,6 @@
 
 
+
 body {
   margin: 0; 
   padding: 0; 
@@ -35,24 +36,32 @@ body {
 .selling-points {
   font-size: 1.5em;
   text-align: center; 
-  width: 50%; 
 }
 
 .point-one {
   float: left; 
+  width: 50%; 
+  padding-top: 10%; 
+  padding-bottom: 10%; 
 }
 
 .point-two {
-  float: right;
+  float: right; 
+  width: 50%; 
+  padding-top: 10%; 
+  padding-bottom: 10%;
 }
 
 .point-three {
   float: left;
+  width: 50%; 
+  padding-top: 10%; 
+  padding-bottom: 10%;
 }
 
 .one-image {
   float: right; 
-  width: 50%; 
+  width: 50%;
 }
 
 .two-image {
@@ -63,4 +72,11 @@ body {
 .three-image {
   float: right; 
   width: 50%;
+}
+
+.bottom-bar-land {
+  background-color: black; 
+  padding-top: 1em; 
+  margin: 0 0 0 0; 
+  padding-bottom: 1em; 
 }

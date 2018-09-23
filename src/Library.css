@@ -1,0 +1,43 @@
+.library {
+    text-align: center; 
+    color: black; 
+}
+
+.header {
+    font-size: 2.5em; 
+    padding-top: 1%; 
+    background-color: black; 
+    color: white; 
+    margin: 0 0 0 0;
+    padding-top: 1.4em; 
+    padding-bottom: 1.4em; 
+    float: center; 
+}
+
+.album-info {  
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em; 
+}
+
+.album-links {
+    padding-top: 2em; 
+}
+
+
+.album-links:hover {
+    color: white; 
+}
+
+.album-cover {
+    padding-top: 2%; 
+    padding-bottom: 2%; 
+    width: 40%; 
+}
+
+#bottom-bar {
+    background-color: black; 
+    padding-top: 1em; 
+    margin: 0 0 0 0; 
+    padding-bottom: 1em; 
+}
